@@ -1,0 +1,117 @@
+unit Threads;
+
+interface
+
+uses
+	Windows, Classes, Math, Dialogs;
+
+type
+  Thread = class(TThread)
+  private
+		procedure AssignBitmap;
+		var zoomOut : byte;
+  protected
+		procedure Execute; override;
+	end;
+	
+procedure run(zoomOut:byte);
+var DataThread	:	Thread;
+implementation
+
+uses Unit1;
+
+{ Important: Methods and properties of objects in visual components can only be
+  used in a method called using Synchronize, for example,
+
+      Synchronize(UpdateCaption);
+
+  and UpdateCaption could look like,
+
+    procedure Thread.UpdateCaption;
+    begin
+      Form1.Caption := 'Updated in a thread';
+    end; }
+
+{ Thread }
+procedure Thread.AssignBitmap;
+begin
+	form1.image1.Picture.Bitmap.Assign(bitmap);
+end;
+
+procedure Thread.Execute;
+var i2,I,max		:	integer;
+		buf					: AnsiString;
+		frequency 	: TFrequency;
+		scale				: extended;
+		Tmp					: byte;
+		_FileSize		: integer;
+		blockCnt		: integer;
+		optVar1			:	integer;
+		ptr					: pointer;
+begin
+	if binary_data = '' then exit;
+	zoomOut:= trunc(Math.power(2,zoomOut));
+	_FileSize := length(binary_data);
+	//shift := trunc(panel2.Left/panel1.Width*_FileSize/256);
+	blockCnt :=  _Filesize div 256;
+
+	if blockcnt > form1.image1.Width*zoomOut then
+		blockcnt := form1.image1.Width*zoomOut;
+	if shift>(_Filesize div 256)-zoomOut*640 then
+		shift := trunc((_Filesize div 256)-zoomOut*640);
+	for I := 0 to 255 do
+		for I2 := 0 to 639 do
+			Exbitmap2[i][i2] := 0;
+	if zoomOut*640*256 > _FileSize then
+	begin
+		Shift := 0;
+	end;
+	I:=shift;
+	while I-shift < blockCnt - 1 do begin
+		buf:='';
+		if i*256 > _FileSize then
+			break;
+		for I2 := 0 to 255 do
+			buf := buf + binary_data[(i)*256 + i2];
+		frequency := Frequency_Analysis(@buf);
+		max := 0;
+		for I2 := 0 to 255 do
+			if max<frequency[i2] then
+				max:=frequency[i2];
+		if max <= 0 then begin
+			showMessage('Error!');
+			EXIT;
+    end;
+		scale:=1/max;
+		optVar1 := trunc((I-shift)/zoomOut);
+		for I2 := 0 to 255 do begin
+			tmp := trunc(frequency[i2]*scale*$FF);
+			if frequency[i2] = max then
+				ExBitmap2[255-i2,optVar1] := tmp shl 16
+			else
+				ExBitmap2[255-i2,optVar1] := (tmp shl 16) + (tmp shl 8) + tmp;
+			//bitmap.Canvas.Pixels[,255-i2] := (tmp shl 16) + (tmp shl 8) + tmp;
+		end;
+		inc(I, zoomOut);
+	end;
+
+	for I := 0 to 255 do begin
+		ptr := bitmap.ScanLine[i];
+		Move(ExBitmap2[i],ptr^, 640*4);
+	end;
+	Synchronize(AssignBitmap);
+end;
+
+procedure run(zoomOut:byte);
+begin
+	if DataThread <> nil then begin
+		TerminateThread(DataThread.Handle, 0);
+		DataThread.Free;
+	end;
+	form1.panel2.Width := trunc(trunc(Math.power(2,zoomOut))*256*640/length(binary_data)*form1.panel1.Width);
+	DataThread 								:= 	Thread.Create(True);
+	DataThread.FreeonTerminate:=	true;
+	DataThread.zoomOut := zoomOut;
+	DataThread.Resume;
+end;
+end.

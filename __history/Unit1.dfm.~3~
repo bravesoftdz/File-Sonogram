@@ -1,0 +1,56 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 310
+  ClientWidth = 566
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image1: TImage
+    Left = 0
+    Top = 0
+    Width = 566
+    Height = 256
+    Align = alTop
+    ExplicitWidth = 105
+  end
+  object Button1: TButton
+    Left = 8
+    Top = 277
+    Width = 75
+    Height = 25
+    Caption = 'Open'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object TrackBar1: TTrackBar
+    Left = 120
+    Top = 281
+    Width = 225
+    Height = 21
+    Min = 1
+    Position = 1
+    TabOrder = 1
+    ThumbLength = 15
+    OnChange = TrackBar1Change
+  end
+  object Edit1: TEdit
+    Left = 351
+    Top = 281
+    Width = 42
+    Height = 21
+    TabOrder = 2
+    Text = 'x1'
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 88
+    Top = 276
+  end
+end

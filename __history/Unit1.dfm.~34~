@@ -1,0 +1,153 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'Form1'
+  ClientHeight = 493
+  ClientWidth = 640
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image1: TImage
+    Left = 0
+    Top = 15
+    Width = 640
+    Height = 256
+    Align = alTop
+    OnClick = Image1Click
+    OnMouseDown = Image1MouseDown
+    OnMouseEnter = Image1MouseEnter
+    OnMouseMove = Image1MouseMove
+    OnMouseUp = Image1MouseUp
+    ExplicitTop = -6
+  end
+  object Label1: TLabel
+    Left = 495
+    Top = 377
+    Width = 64
+    Height = 13
+    Caption = 'Zoom out: 1x'
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 171
+    Top = 381
+    Width = 23
+    Height = 22
+    Caption = '+'
+    OnClick = SpeedButton1Click
+  end
+  object SpeedButton2: TSpeedButton
+    Left = 171
+    Top = 405
+    Width = 23
+    Height = 22
+    Caption = '-'
+    OnClick = SpeedButton2Click
+  end
+  object Image2: TImage
+    Left = 0
+    Top = 271
+    Width = 640
+    Height = 90
+    Align = alTop
+    DragCursor = crHSplit
+    DragKind = dkDock
+    IncrementalDisplay = True
+    Stretch = True
+  end
+  object Splitter1: TSplitter
+    Left = 0
+    Top = 361
+    Width = 640
+    Height = 7
+    Cursor = crVSplit
+    Align = alTop
+    Beveled = True
+  end
+  object TrackBar1: TTrackBar
+    Left = 200
+    Top = 383
+    Width = 289
+    Height = 21
+    Max = 0
+    Min = -8
+    TabOrder = 0
+    ThumbLength = 15
+    OnChange = TrackBar1Change
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 640
+    Height = 15
+    Align = alTop
+    BevelInner = bvLowered
+    BevelOuter = bvLowered
+    Color = clMedGray
+    TabOrder = 1
+    object Panel2: TPanel
+      Left = 0
+      Top = 0
+      Width = 640
+      Height = 13
+      Align = alCustom
+      BevelKind = bkFlat
+      BevelOuter = bvSpace
+      Color = clSkyBlue
+      Constraints.MinWidth = 20
+      TabOrder = 0
+      OnMouseDown = Panel2MouseDown
+      OnMouseMove = Panel2MouseMove
+      OnMouseUp = Panel2MouseUp
+    end
+  end
+  object CheckBox1: TCheckBox
+    Left = 495
+    Top = 391
+    Width = 97
+    Height = 17
+    Caption = 'Show maximum'
+    TabOrder = 2
+    OnClick = CheckBox1Click
+  end
+  object CheckBox2: TCheckBox
+    Left = 495
+    Top = 408
+    Width = 137
+    Height = 17
+    Caption = 'Anti - aliasing'
+    TabOrder = 3
+    OnClick = CheckBox2Click
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 88
+    Top = 382
+  end
+  object MainMenu1: TMainMenu
+    Left = 88
+    Top = 416
+    object File1: TMenuItem
+      Caption = 'File'
+      object Open1: TMenuItem
+        Caption = 'Open...'
+        OnClick = Button1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Exit1: TMenuItem
+        Caption = 'Exit'
+        OnClick = Exit1Click
+      end
+    end
+  end
+end

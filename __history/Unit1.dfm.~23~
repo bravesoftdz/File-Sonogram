@@ -1,0 +1,119 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'Form1'
+  ClientHeight = 321
+  ClientWidth = 640
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image1: TImage
+    Left = 0
+    Top = 0
+    Width = 640
+    Height = 256
+    Align = alTop
+    OnMouseEnter = Image1MouseEnter
+    ExplicitTop = -6
+  end
+  object Label1: TLabel
+    Left = 495
+    Top = 271
+    Width = 64
+    Height = 13
+    Caption = 'Zoom out: 1x'
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 171
+    Top = 275
+    Width = 23
+    Height = 22
+    Caption = '+'
+    OnClick = SpeedButton1Click
+  end
+  object SpeedButton2: TSpeedButton
+    Left = 171
+    Top = 299
+    Width = 23
+    Height = 22
+    Caption = '-'
+    OnClick = SpeedButton2Click
+  end
+  object Button1: TButton
+    Left = 8
+    Top = 277
+    Width = 75
+    Height = 25
+    Caption = 'Open File'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object TrackBar1: TTrackBar
+    Left = 200
+    Top = 277
+    Width = 289
+    Height = 21
+    Max = 0
+    Min = -4
+    TabOrder = 1
+    ThumbLength = 15
+    OnChange = TrackBar1Change
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 256
+    Width = 640
+    Height = 15
+    Align = alTop
+    BevelInner = bvLowered
+    BevelOuter = bvLowered
+    Color = clMedGray
+    TabOrder = 2
+    object Panel2: TPanel
+      Left = 0
+      Top = 0
+      Width = 640
+      Height = 13
+      Align = alCustom
+      BevelKind = bkFlat
+      BevelOuter = bvSpace
+      Color = clSkyBlue
+      Constraints.MinWidth = 20
+      TabOrder = 0
+      OnMouseDown = Panel2MouseDown
+      OnMouseMove = Panel2MouseMove
+      OnMouseUp = Panel2MouseUp
+    end
+  end
+  object CheckBox1: TCheckBox
+    Left = 495
+    Top = 285
+    Width = 97
+    Height = 17
+    Caption = 'Show maximum'
+    TabOrder = 3
+    OnClick = CheckBox1Click
+  end
+  object CheckBox2: TCheckBox
+    Left = 495
+    Top = 302
+    Width = 137
+    Height = 17
+    Caption = 'Anti - aliasing'
+    TabOrder = 4
+    OnClick = CheckBox2Click
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 88
+    Top = 276
+  end
+end
