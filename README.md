@@ -9,7 +9,7 @@ Complete admin guide can be found [here](https://drive.google.com/file/d/0B4Ofim
 
 **`!apply`**
 
-`    print apply message (commands\apply.txt)`
+ - `    print apply message (commands\apply.txt)`
     
 !night <on/off>
     turn night mode for you
