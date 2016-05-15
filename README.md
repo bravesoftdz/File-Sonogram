@@ -7,7 +7,8 @@ DG Admin script for Call of Duty: MW3 dedicated server. Based on RGAdmin v1.05, 
 Complete admin guide can be found [here](https://drive.google.com/file/d/0B4OfimTH0gRhdGxoSHBJY194UWs/view?usp=sharing).<br><br>
 **New commands** (not included in RG Admin)
 
-    !apply
+<b>`!apply`</b>
+
         print apply message (commands\apply.txt)
         
     !night <on/off>
@@ -138,3 +139,5 @@ Complete admin guide can be found [here](https://drive.google.com/file/d/0B4Ofim
 ` Fixed issue with trophy-kill (when victim gets banned for it);`
 
  `Fixed issue with !ac130 in isnipe mode (when issuer gets banned for it)`
+ 
+ ![nipaa~ =^_^=](http://anime.net.kg/uploads/pictures/Furude.Rika.low.1153817.png)
