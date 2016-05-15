@@ -7,8 +7,7 @@ DG Admin script for Call of Duty: MW3 dedicated server. Based on RGAdmin v1.05, 
 Complete admin guide can be found [here](https://drive.google.com/file/d/0B4OfimTH0gRhdGxoSHBJY194UWs/view?usp=sharing).<br><br>
 **New commands** (not included in RG Admin)
 
-<b>`!apply`</b>
-
+<b>`!apply`</b><br>
 `---        print apply message (commands\apply.txt)`
         
     !night <on/off>
