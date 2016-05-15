@@ -10,105 +10,104 @@ Complete admin guide can be found [here](https://drive.google.com/file/d/0B4Ofim
 **`!apply`**<br>
 `--- print apply message (commands\apply.txt)`
         
-**`!night <on/off>`**
-
+**`!night <on/off>`**<br>
 `--- turn night mode for you`
 
-**`!sunlight <float RED> <float GREEN> <float BLUE>
+**`!sunlight <float RED> <float GREEN> <float BLUE>`**<br>
 `--- set sunlight color multiplier`
 
-**`!cdvar <int/foat/string/direct> <key> <value>
+**`!cdvar <int/foat/string/direct> <key> <value>`**<br>
 `--- set custom cdvar. In direct mode, `
 `--- you can separate multiple values by comma.`
 
-**`!alias <player> [alias]
+**`!alias <player> [alias]`**<br>
 `--- set chat alias *(leave [alias] field to reset it)*`
 
-**`!myalias [alias]
+**`!myalias [alias]`**<br>
 
-**`!daytime <day|night|morning|cloudy>
+**`!daytime <day|night|morning|cloudy>`**<br>
 `--- Force graphics mode for all players. `
 `--- If “night”, commands “!fx” and “!night” are blocked.`
 
-**`!kd <player> <kills> <deaths>
+**`!kd <player> <kills> <deaths>`**<br>
 `--- Set custom kills/deaths score for player. `
 `--- (Affects only scoreboard, but doesn’t actually changes it).`
 
-**`!unban <player>
+**`!unban <player>`**<br>
 `--- Unban single player by name.`
 
-**`!unban-id <ban id>
-`--- Deletes given banentry from banlist.
+**`!unban-id <ban id>`**<br>
+`--- Deletes given banentry from banlist.`
 `--- You can get banentries by doing !lastbans or !searchbans.`
 
-**`!report <message>
+**`!report <message>`**<br>
 `--- Player can report hackers. Message will be sent to all online admins, and saved to history.`
 
-**`!lastreports [amount]
+**`!lastreports [amount]`**<br>
 `--- Admins can access to !report history. Amount may be 1 – 8, default is 4.`
 
-**`!setfx <fx> [spawn key]
+**`!setfx <fx> [spawn key]`**<br>
 `--- Spawn custom FX at player origin. Triggered by key. If key not specified, default is “activate”.`
 
-**`!fire
+**`!fire`**<br>
 `--- Player emit beatiful fire sparks. `
 
-**`!suicide
+**`!suicide`**<br>
 `--- Suicide.`
 
-**`!yes
+**`!yes`**<br>
 `--- Confirm command execution.`
 
-**`!no
+**`!no`**<br>
 `--- Abort command execution.`
 
-**`!sdvar <key> [value]
+**`!sdvar <key> [value]`**<br>
 `--- Set server dvar. If value not specified, NULL value will be set. `
 `--- Multiple values are separated by space.`
 
-**`!3rdperson
+**`!3rdperson`**<br>
 `--- Forced 3rd person view.`
 
-**`!teleport <player1> <player2>
+**`!teleport <player1> <player2>`**<br>
 `--- Teleport player1 to player2.`
 
-**`!fly <on|off> [bound key]
+**`!fly <on|off> [bound key]`**<br>
 `--- Invisible flying god mode. If key not specified, default is “F” (activate).`
 
-**`!jump <<height> | default>
+**`!jump <<height> | default>`**<br>
 `--- Set jump height.`
 
-**`!speed <<speed> | default>
+**`!speed <<speed> | default>`**<br>
 `--- Set speed multiplier.`
 
-**`!gravity <<g> | default>
+**`!gravity <<g> | default>`**<br>
 `--- Set gravity force.`
 
-**`!ac130 <all | <player>> [-p]
+**`!ac130 <all | <player>> [-p]`**<br>
 `--- Hand-held AC130 gun. `
 `--- –p flag makes it permanent, until round end.`
 
-**`!register
+**`!register`**<br>
 `--- Register to XLR Stats.`
 
-**`!xlrstats [player]
+**`!xlrstats [player]`**<br>
 `--- Your statistics. `
 `--- Specify player, if you wanna know how good other players.`
 
-**`!xlrtop [amount]
+**`!xlrtop [amount]`**<br>
 `--- XLR Top scores. `
 `--- Amount should’nt be greather than 8, and smaller than 1.`
 
-**`!playfxontag <fx> [tag = j_head]
+**`!playfxontag <fx> [tag = j_head]`**<br>
 `--- Like !setfx, but effect is linked to the player's origin.`
 
-**`!setclantag <player> [tag]
+**`!setclantag <player> [tag]`**<br>
 `--- Set clan tag of player. Up to 7 characters.`
 
-**`!rotatescreen <player> <degree>
+**`!rotatescreen <player> <degree>`**<br>
 `--- Set camera roll of player. Very abusive.`
 
-**`!votekick <player> [reason]
+**`!votekick <player> [reason]`**<br>
 `--- Start a vote to kick player.`
 
 **Misc comands** `(not enabled by default)`
