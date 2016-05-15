@@ -17,7 +17,7 @@ Complete admin guide can be found [here](https://drive.google.com/file/d/0B4Ofim
 `--- set sunlight color multiplier`
 
 **`!cdvar <int/foat/string/direct> <key> <value>`**<br>
-`--- set custom cdvar. In direct mode, `
+`--- set custom cdvar. In direct mode, `<br>
 `--- you can separate multiple values by comma.`
 
 **`!alias <player> [alias]`**<br>
@@ -26,18 +26,18 @@ Complete admin guide can be found [here](https://drive.google.com/file/d/0B4Ofim
 **`!myalias [alias]`**<br>
 
 **`!daytime <day|night|morning|cloudy>`**<br>
-`--- Force graphics mode for all players. `
+`--- Force graphics mode for all players. `<br>
 `--- If “night”, commands “!fx” and “!night” are blocked.`
 
 **`!kd <player> <kills> <deaths>`**<br>
-`--- Set custom kills/deaths score for player. `
+`--- Set custom kills/deaths score for player. `<br>
 `--- (Affects only scoreboard, but doesn’t actually changes it).`
 
 **`!unban <player>`**<br>
 `--- Unban single player by name.`
 
 **`!unban-id <ban id>`**<br>
-`--- Deletes given banentry from banlist.`
+`--- Deletes given banentry from banlist.`<br>
 `--- You can get banentries by doing !lastbans or !searchbans.`
 
 **`!report <message>`**<br>
@@ -84,18 +84,18 @@ Complete admin guide can be found [here](https://drive.google.com/file/d/0B4Ofim
 `--- Set gravity force.`
 
 **`!ac130 <all | <player>> [-p]`**<br>
-`--- Hand-held AC130 gun. `
+`--- Hand-held AC130 gun. `<br>
 `--- –p flag makes it permanent, until round end.`
 
 **`!register`**<br>
 `--- Register to XLR Stats.`
 
 **`!xlrstats [player]`**<br>
-`--- Your statistics. `
+`--- Your statistics. `<br>
 `--- Specify player, if you wanna know how good other players.`
 
 **`!xlrtop [amount]`**<br>
-`--- XLR Top scores. `
+`--- XLR Top scores. `<br>
 `--- Amount should’nt be greather than 8, and smaller than 1.`
 
 **`!playfxontag <fx> [tag = j_head]`**<br>
