@@ -8,7 +8,7 @@ Complete admin guide can be found [here](https://drive.google.com/file/d/0B4Ofim
 **New commands** (not included in RG Admin)
 
 **`!apply`**<br>
-`　　print apply message (commands\apply.txt)`
+`　　　print apply message (commands\apply.txt)`
         
 **`!night <on/off>`**<br>
 `--- turn night mode for you`
